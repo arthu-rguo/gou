@@ -1,0 +1,3 @@
+.PHONY: pre-commit
+pre-commit:
+	go mod tidy && go fmt ./... && go fix ./... && go vet ./... && go test ./...
